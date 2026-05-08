@@ -110,6 +110,18 @@
   gap: var(--space-1);
 }
 
+.keyboard-hint {
+  display: none;
+}
+
+@media (min-width: 768px) {
+  .keyboard-hint {
+    color: var(--c-text-dim);
+    display: block;
+    margin-block-start: 0.5rem;
+  }
+}
+
 /* ── Scope pill (out-of-scope indicator) ─────────────────── */
 
 .scope-badge {

@@ -313,7 +313,6 @@
   display: flex;
   flex-wrap: wrap;
   gap: var(--space-4);
-  margin-block-end: var(--space-6);
 }
 
 .stat-item {
