@@ -1,0 +1,98 @@
+/* ── Panel container ─────────────────────────────────────── */
+
+.panel {
+  background-color: var(--c-bg-surface);
+  display: flex;
+  flex-direction: column;
+}
+
+@media (min-width: 768px) {
+  .panel:first-child {
+    border-inline-end: 1px solid var(--c-border);
+  }
+}
+
+@media (max-width: 767px) {
+  .panel:first-child {
+    border-block-end: 1px solid var(--c-border);
+  }
+}
+
+/* ── Panel header ────────────────────────────────────────── */
+
+.panel-header {
+  align-items: center;
+  border-block-end: 1px solid var(--c-border);
+  display: flex;
+  gap: var(--space-3);
+  min-block-size: 2.5rem;
+  padding-inline: var(--space-4);
+}
+
+.panel-label {
+  color: var(--c-text-muted);
+  font-family: var(--font-mono);
+  font-size: 0.6875rem;
+  font-weight: 400;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+/* ── Panel editor ────────────────────────────────────────── */
+
+.panel-editor {
+  block-size: var(--panel-height);
+  display: flex;
+  overflow: hidden;
+  position: relative;
+}
+
+.editor-textarea {
+  background-color: var(--c-bg-input);
+  block-size: 100%;
+  border: none;
+  caret-color: var(--c-accent);
+  color: var(--c-text-base);
+  font-family: var(--font-mono);
+  font-size: 0.875rem;
+  inline-size: 100%;
+  line-height: 1.75;
+  outline: none;
+  overflow-y: auto;
+  padding: var(--space-4);
+  tab-size: 2;
+  transition: background-color var(--t-fast);
+}
+
+.editor-textarea::placeholder {
+  color: var(--c-text-dim);
+}
+
+.editor-textarea:focus {
+  background-color: #111e31;
+  box-shadow: inset 0 0 0 1px var(--c-border);
+}
+
+.editor-textarea::selection {
+  background-color: rgb(94 240 200 / 0.18);
+}
+
+/* ── Clear button ────────────────────────────────────────── */
+
+.btn-clear {
+  background: none;
+  border: none;
+  border-radius: var(--radius-sm);
+  color: var(--c-text-dim);
+  cursor: pointer;
+  font-size: 0.6875rem;
+  letter-spacing: 0.04em;
+  margin-inline-start: auto;
+  padding: var(--space-1) var(--space-2);
+  text-transform: uppercase;
+  transition: color var(--t-fast);
+}
+
+.btn-clear:hover {
+  color: var(--c-text-base);
+}

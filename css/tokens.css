@@ -1,0 +1,76 @@
+:root {
+  /* ── Surfaces ──────────────────────────────────────────── */
+  --c-bg-primary: #0b1622;
+  --c-bg-surface: #132035;
+  --c-bg-raised: #1c2f4a;
+  --c-bg-input: #0f1c2e;
+
+  /* ── Borders ───────────────────────────────────────────── */
+  --c-border: rgb(94 240 200 / 0.12);
+  --c-border-subtle: rgb(94 240 200 / 0.06);
+
+  /* ── Text ──────────────────────────────────────────────── */
+  --c-text-bright: #e8f1ff;
+  --c-text-base: #c5d0e8;
+  --c-text-muted: #94a3b8;
+  --c-text-dim: #8697ae;
+
+  /* ── Cascade states ────────────────────────────────────── */
+  --c-win: #5ef0c8;
+  --c-win-bg: rgb(94 240 200 / 0.08);
+  --c-win-border: rgb(94 240 200 / 0.35);
+
+  --c-lose: #ff6b6b;
+  --c-lose-bg: rgb(255 107 107 / 0.08);
+  --c-lose-border: rgb(255 107 107 / 0.35);
+
+  --c-important: #fbbf24;
+  --c-important-bg: rgb(251 191 36 / 0.08);
+  --c-important-border: rgb(251 191 36 / 0.35);
+
+  --c-specificity: #a78bfa;
+  --c-specificity-bg: rgb(167 139 250 / 0.12);
+
+  --c-inherit: #60a5fa;
+  --c-inherit-bg: rgb(96 165 250 / 0.08);
+  --c-inherit-border: rgb(96 165 250 / 0.35);
+
+  /* ── Accent ────────────────────────────────────────────── */
+  --c-accent: #5ef0c8;
+  --c-accent-hover: #2ead8a;
+  --c-accent-text: #0b1622;
+
+  /* ── Typography ────────────────────────────────────────── */
+  --font-ui: "Plus Jakarta Sans", system-ui, -apple-system, sans-serif;
+  --font-body: "Inter", system-ui, -apple-system, sans-serif;
+  --font-mono: ui-monospace, "Cascadia Code", "Fira Code", "Consolas", monospace;
+
+  /* ── Spacing ───────────────────────────────────────────── */
+  --space-1: 0.25rem;
+  --space-2: 0.5rem;
+  --space-3: 0.75rem;
+  --space-4: 1rem;
+  --space-5: 1.25rem;
+  --space-6: 1.5rem;
+  --space-8: 2rem;
+  --space-10: 2.5rem;
+  --space-12: 3rem;
+
+  /* ── Layout ────────────────────────────────────────────── */
+  --header-height: 3.5rem;
+  --panel-height: clamp(280px, 40vh, 420px);
+  --max-width: 1440px;
+
+  /* ── Radii ─────────────────────────────────────────────── */
+  --radius-sm: 4px;
+  --radius-md: 6px;
+  --radius-lg: 10px;
+
+  /* ── Transitions ───────────────────────────────────────── */
+  --t-fast: 120ms ease;
+  --t-base: 200ms ease;
+
+  /* ── Shadows ───────────────────────────────────────────── */
+  --shadow-sm: 0 1px 3px rgb(0 0 0 / 0.3);
+  --shadow-md: 0 4px 12px rgb(0 0 0 / 0.4);
+}

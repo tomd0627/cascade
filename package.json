@@ -1,0 +1,26 @@
+{
+  "name": "cascade",
+  "description": "CSS specificity and cascade visualizer",
+  "version": "1.0.0",
+  "type": "module",
+  "private": true,
+  "scripts": {
+    "prepare": "husky"
+  },
+  "devDependencies": {
+    "@eslint/js": "^9.25.0",
+    "eslint": "^9.25.0",
+    "eslint-config-prettier": "^10.1.5",
+    "husky": "^9.1.7",
+    "lint-staged": "^15.5.1",
+    "prettier": "^3.5.3",
+    "stylelint": "^16.19.1",
+    "stylelint-config-standard": "^36.0.1",
+    "stylelint-order": "^6.0.4"
+  },
+  "lint-staged": {
+    "*.{html,css,js}": "prettier --write",
+    "*.js": "eslint --fix",
+    "*.css": "stylelint --fix"
+  }
+}

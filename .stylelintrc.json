@@ -1,0 +1,12 @@
+{
+  "extends": ["stylelint-config-standard"],
+  "plugins": ["stylelint-order"],
+  "rules": {
+    "no-duplicate-selectors": true,
+    "order/properties-alphabetical-order": true,
+    "color-function-notation": "modern",
+    "alpha-value-notation": "number",
+    "media-feature-range-notation": "prefix",
+    "custom-property-empty-line-before": null
+  }
+}

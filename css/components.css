@@ -1,0 +1,124 @@
+/* ── Primary Analyze button ──────────────────────────────── */
+
+.btn-analyze {
+  align-items: center;
+  background-color: var(--c-accent);
+  border: none;
+  border-radius: var(--radius-md);
+  color: var(--c-accent-text);
+  cursor: pointer;
+  display: inline-flex;
+  font-family: var(--font-ui);
+  font-size: 0.875rem;
+  font-weight: 700;
+  gap: var(--space-2);
+  padding: var(--space-2) var(--space-5);
+  transition:
+    background-color var(--t-fast),
+    transform var(--t-fast);
+  white-space: nowrap;
+}
+
+.btn-analyze:hover {
+  background-color: var(--c-accent-hover);
+}
+
+.btn-analyze:active {
+  transform: scale(0.97);
+}
+
+.btn-analyze:disabled {
+  cursor: not-allowed;
+  opacity: 0.55;
+}
+
+/* ── Analyze loading spinner ─────────────────────────────── */
+
+.btn-analyze[data-loading="true"] {
+  cursor: wait;
+}
+
+.btn-analyze[data-loading="true"]::after {
+  animation: spin 0.75s linear infinite;
+  block-size: 0.8em;
+  border: 2px solid transparent;
+  border-block-start-color: currentcolor;
+  border-radius: 50%;
+  content: "";
+  display: inline-block;
+  inline-size: 0.8em;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* ── Error banner ────────────────────────────────────────── */
+
+.error-banner {
+  align-items: flex-start;
+  background-color: var(--c-lose-bg);
+  border: 1px solid var(--c-lose-border);
+  border-radius: var(--radius-md);
+  display: flex;
+  gap: var(--space-3);
+  padding: var(--space-3) var(--space-4);
+}
+
+.error-banner-icon {
+  color: var(--c-lose);
+  flex-shrink: 0;
+  font-size: 0.875rem;
+  line-height: 1.6;
+}
+
+.error-banner-content {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-1);
+}
+
+.error-banner-title {
+  color: var(--c-lose);
+  font-size: 0.875rem;
+  font-weight: 600;
+}
+
+.error-banner-message {
+  color: var(--c-text-base);
+  font-size: 0.8125rem;
+}
+
+/* ── Keyboard shortcut ───────────────────────────────────── */
+
+.kbd {
+  background-color: var(--c-bg-raised);
+  border: 1px solid var(--c-border);
+  border-radius: var(--radius-sm);
+  color: var(--c-text-dim);
+  font-family: var(--font-mono);
+  font-size: 0.625rem;
+  padding: 1px var(--space-1);
+}
+
+.header-shortcut {
+  align-items: center;
+  color: var(--c-text-dim);
+  font-size: 0.75rem;
+  gap: var(--space-1);
+}
+
+/* ── Scope pill (out-of-scope indicator) ─────────────────── */
+
+.scope-badge {
+  background-color: var(--c-bg-raised);
+  border: 1px solid var(--c-border);
+  border-radius: var(--radius-sm);
+  color: var(--c-text-dim);
+  font-size: 0.625rem;
+  letter-spacing: 0.04em;
+  padding: 1px var(--space-2);
+  text-transform: uppercase;
+}

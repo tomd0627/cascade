@@ -1,0 +1,138 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Paste a stylesheet and HTML markup — Cascade computes specificity scores, resolves the cascade, and shows exactly which rules win and why."
+    />
+    <meta name="theme-color" content="#0b1622" />
+    <title>Cascade — CSS Specificity &amp; Cascade Visualizer</title>
+
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500&family=Plus+Jakarta+Sans:wght@600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="/css/tokens.css?v=1" />
+    <link rel="stylesheet" href="/css/reset.css?v=1" />
+    <link rel="stylesheet" href="/css/layout.css?v=1" />
+    <link rel="stylesheet" href="/css/panels.css?v=1" />
+    <link rel="stylesheet" href="/css/visualization.css?v=1" />
+    <link rel="stylesheet" href="/css/components.css?v=1" />
+  </head>
+  <body>
+    <a class="skip-link" href="#results">Skip to results</a>
+
+    <header class="app-header" role="banner">
+      <div class="header-inner">
+        <div class="wordmark" aria-label="Cascade">
+          <svg
+            class="wordmark-icon"
+            viewBox="0 0 24 24"
+            fill="none"
+            aria-hidden="true"
+            focusable="false"
+          >
+            <rect x="2" y="3" width="20" height="4" rx="2" fill="currentColor" />
+            <rect x="2" y="10" width="13" height="4" rx="2" fill="currentColor" opacity="0.65" />
+            <rect x="2" y="17" width="7" height="4" rx="2" fill="currentColor" opacity="0.35" />
+          </svg>
+          <span class="wordmark-text">Cascade</span>
+        </div>
+
+        <p class="header-tagline" aria-hidden="true">CSS specificity &amp; cascade visualizer</p>
+
+        <div class="header-actions">
+          <span class="header-shortcut" aria-hidden="true">
+            <kbd class="kbd">Ctrl</kbd>
+            <kbd class="kbd">↵</kbd>
+          </span>
+          <button
+            class="btn-analyze"
+            id="btn-analyze"
+            type="button"
+            aria-label="Analyze CSS and HTML"
+          >
+            Analyze
+          </button>
+        </div>
+      </div>
+    </header>
+
+    <main class="app-main" id="main">
+      <div class="panels-grid" role="group" aria-label="Input panels">
+        <section class="panel panel-css" aria-labelledby="label-css">
+          <div class="panel-header">
+            <span class="panel-label" id="label-css">CSS</span>
+            <button class="btn-clear" type="button" aria-label="Clear CSS input">Clear</button>
+          </div>
+          <div class="panel-editor">
+            <textarea
+              id="input-css"
+              class="editor-textarea"
+              spellcheck="false"
+              autocomplete="off"
+              autocorrect="off"
+              autocapitalize="off"
+              aria-labelledby="label-css"
+              aria-multiline="true"
+              aria-required="true"
+              placeholder="/* Paste your CSS here */"
+            ></textarea>
+          </div>
+        </section>
+
+        <section class="panel panel-html" aria-labelledby="label-html">
+          <div class="panel-header">
+            <span class="panel-label" id="label-html">HTML</span>
+            <button class="btn-clear" type="button" aria-label="Clear HTML input">Clear</button>
+          </div>
+          <div class="panel-editor">
+            <textarea
+              id="input-html"
+              class="editor-textarea"
+              spellcheck="false"
+              autocomplete="off"
+              autocorrect="off"
+              autocapitalize="off"
+              aria-labelledby="label-html"
+              aria-multiline="true"
+              aria-required="true"
+              placeholder="&lt;!-- Paste your HTML here --&gt;"
+            ></textarea>
+          </div>
+        </section>
+      </div>
+
+      <section
+        class="results-section"
+        id="results"
+        aria-label="Analysis results"
+        aria-live="polite"
+        aria-atomic="false"
+      >
+        <div class="results-empty" id="results-empty">
+          <p>
+            Paste CSS and HTML above, then click&nbsp;<strong>Analyze</strong>&nbsp;to see the
+            cascade.
+            <br />
+            <small style="display: block; margin-block-start: 0.5rem; color: var(--c-text-dim)">
+              Or press <kbd class="kbd">Ctrl</kbd>&nbsp;<kbd class="kbd">↵</kbd> — sample content is
+              pre-loaded.
+            </small>
+          </p>
+        </div>
+
+        <div class="results-content" id="results-content" hidden></div>
+      </section>
+    </main>
+
+    <script type="module" src="/js/main.js?v=1"></script>
+  </body>
+</html>
